@@ -1,7 +1,7 @@
 "use strict";
 "use strict";
 
-const NYC_KEY = 'bjp8KrRvAPtuf809u1UXnI0Z8';
+const NYC_KEY = '****************';
 const request = require('superagent-bluebird-promise');
 const NYC_CENSUS_TRACTS_DS = 'https://data.cityofnewyork.us/resource/i69b-3rdj.json';
 const NYC_POPULATION_DS = 'https://data.cityofnewyork.us/resource/338t-yv99.json';
@@ -42,7 +42,7 @@ function getPopulationOfCensus(fullCensusTract) {
         })
         .set('X-App-Token', NYC_KEY) // the verification header for the api
 }
-    
+
 function parserCensusPopulation(populationsByYear) {
     let nearestPopulation;
 

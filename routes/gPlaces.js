@@ -17,10 +17,10 @@ let i = 0;
 
 request.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json')
 	.query({
-		key: 'AIzaSyBwnGWcCBAdMtM2h69aHpgiSKAD0S8PI8g',
+		key: "**********",
 		radius: '30',
 		location: '32.070290, 34.782666',
-		rankby: 'prominence' 
+		rankby: 'prominence'
 	})
 	.then(extractRelevantPlacesFromResponse)
 	.then(() => {
@@ -29,7 +29,7 @@ request.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json')
 
 	function extractRelevantPlacesFromResponse(res) {
 		_amountOfRelevantPlaces += res.body.results.filter(filterRelevantPlaces).length;
-		
+
 		if (res.body.next_page_token)
 			return loopRequest(res.body.next_page_token);
 		else
@@ -51,7 +51,7 @@ request.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json')
 				key: 'AIzaSyBwnGWcCBAdMtM2h69aHpgiSKAD0S8PI8g',
 				radius: '30',
 				location: '32.070290, 34.782666',
-				rankby: 'prominence' 
+				rankby: 'prominence'
 			})
 		})
 		.then((res) => {
