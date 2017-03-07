@@ -5,3 +5,4 @@ public/components
 npm-debug*
 typings
 .vscode
+.idea
